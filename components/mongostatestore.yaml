@@ -1,0 +1,11 @@
+# Documentação: https://docs.dapr.io/reference/components-reference/supported-state-stores/setup-mongodb/
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: mongostatestore
+spec:
+  type: state.mongodb
+  version: v1
+  metadata:
+  - name: host
+    value: localhost:27017

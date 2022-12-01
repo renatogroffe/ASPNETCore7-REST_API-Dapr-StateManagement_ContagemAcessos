@@ -1,0 +1,11 @@
+# Documentação: https://docs.dapr.io/reference/components-reference/supported-state-stores/setup-sqlserver/
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: sqlserverstatestore
+spec:
+  type: state.sqlserver
+  version: v1
+  metadata:
+  - name: connectionString
+    value: "Server=localhost;User Id=sa;Password=SqlServer2019!;TrustServerCertificate=True;"

@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres
+    volumes:
+      - ./BaseDaprPostgres.sql:/docker-entrypoint-initdb.d/1-basedapr.sql
+    environment:
+      POSTGRES_PASSWORD: "Postgres2022!"
+    ports:
+      - "5432:5432"
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      SA_PASSWORD: "SqlServer2019!"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Developer"
+    ports:
+      - "1433:1433"

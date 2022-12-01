@@ -1,0 +1,1 @@
+CREATE DATABASE dapr_tests;

@@ -1,0 +1,1 @@
+dapr run --app-id APIContagem --components-path ..\components dotnet run
